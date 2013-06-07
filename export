@@ -1,0 +1,7 @@
+# to add in .bashrc
+
+alias check_font='if [ "$(ps ax | grep "9pserv.*font" | grep -v grep | wc -l)" == "0" ]; then fontsrv & echo; fi'
+alias acme="check_font; acme -f /mnt/font/'Bitstream Vera Sans Mono'/10a/font -l $HOME/acme.dump"
+PLAN9=$HOME/plan9 export PLAN9
+PATH=$PATH:$PLAN9/bin export PATH
+
