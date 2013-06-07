@@ -962,21 +962,21 @@ iconinit(void)
 
 	if(tagcols[BACK] == nil) {
 		/* Blue */
-		tagcols[BACK] = allocimagemix(display, DPalebluegreen, DWhite);
-		tagcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DPalegreygreen);
+		tagcols[BACK] = allocimagemix(display, 0x262729ff, 0x262729ff);
+		tagcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0x555657ff);
 		tagcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DPurpleblue);
-		tagcols[TEXT] = display->black;
-		tagcols[HTEXT] = display->black;
+		tagcols[TEXT] = display->white;
+		tagcols[HTEXT] = display->white;
 	
 		/* Yellow */
-		textcols[BACK] = allocimagemix(display, DPaleyellow, DWhite);
-		textcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DDarkyellow);
-		textcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DYellowgreen);
+		textcols[BACK] = allocimagemix(display, 0xeeeeeeff, 0xeeeeeeff);
+		textcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0xe04613ff);
+		textcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, 0xefefefff);
 		textcols[TEXT] = display->black;
 		textcols[HTEXT] = display->black;
 	}
-	
-	r = Rect(0, 0, Scrollwid+ButtonBorder, font->height+1);
+
+	r = Rect(0, 0, Scrollwid + ButtonBorder, font->height + 1);
 	if(button && eqrect(r, button->r))
 		return;
 

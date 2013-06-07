@@ -465,11 +465,11 @@ enum
 	EVENTSIZE = 256,
 };
 
-#define Scrollwid scalesize(display, 12)
+#define Scrollwid scalesize(display, 4)
 #define Scrollgap scalesize(display, 4)
 #define Margin scalesize(display, 4)
 #define Border scalesize(display, 2)
-#define ButtonBorder scalesize(display, 2)
+#define ButtonBorder scalesize(display, 4)
 
 #define	QID(w,q)	((w<<8)|(q))
 #define	WIN(q)	((((ulong)(q).path)>>8) & 0xFFFFFF)
