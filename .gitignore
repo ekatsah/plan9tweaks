@@ -6,14 +6,14 @@
 ^state$
 ^state.old$
 ^state.journal$
-\.o$
-\.a$
+*\.o
+*\.a
 ^man/man[0-9]+/.*\.html$
 ^src/.*/o\.[^/]+$
 y.tab.[ch]$
 ^src/cmd/rc/x.tab.h$
 ^unix/.*\.tgz$
-^bin/
+bin/
 ^log/
 ^dict/
 ^postscript/font/
@@ -25,3 +25,6 @@ last-change
 lib/codereview/codereview.pyc
 src/cmd/awk/y.output
 src/cmd/devdraw/latin1.h
+o\.*
+*.tab.c
+*.tab.h
